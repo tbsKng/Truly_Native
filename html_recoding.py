@@ -1,7 +1,7 @@
 import os 
 import glob
 
-Path="/home/tobi/Schreibtisch/Kaggle/Data/1"
+Path=raw_input("Define Path: ")
 count=0
 for filename in glob.glob(os.path.join(Path, '*.txt')):
 	f=filename
