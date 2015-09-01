@@ -1,5 +1,12 @@
-Path=raw_input("Specify Path: ")
+import os 
+import glob
 
-for filename in os.listdir(Path):
-	f=open
-	f.read
+Path="/home/tobi/Schreibtisch/Kaggle/Data/0"
+
+for filename in glob.glob(os.path.join(Path, '*.txt')):
+	f=filename
+	#f=open(filename,'r')
+	#print f.read()
+	name=os.path.splitext(f)[0]
+	os.rename(f,name+".html")
+	#f.close()
